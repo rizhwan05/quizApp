@@ -1,84 +1,172 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f065;
+    background-color: #E7F0DC;
+    color: #131842;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #ffffff57;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.body-main {
+    background-color: #f0f0f0;
+    background-image: url('img1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 100px;
 }
 
-h1, h2, h3 {
-    color: #333;
+.info {
+    padding: 5px;
 }
 
-h1 {
+.heading {
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
+    padding-top: 50px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.Rules_box {
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
+    font-weight: 550;
+}
+
+.nxt-btn {
+    margin: auto;
+    padding-top: 20px;
     text-align: center;
 }
 
-h2 {
-    margin-top: 0;
+.start-btn {
+    background-color: #131842;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-p {
+.start-btn:hover {
+    background-color: #5A72A0;
+    color: white;
+    transform: scale(1.05);
+}
+
+.quiz-container {
+    background-color: #EBF4F6;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.question h2 {
+    font-size: 20px;
     margin-bottom: 10px;
+    color: #4F091D;
 }
 
-/* Form styles */
-form {
-    margin-top: 20px;
-}
-
-label {
+.options label {
     display: block;
     margin-bottom: 8px;
-    color: #555;
+    color: #283149;
 }
 
-input[type="text"],
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.options input[type="radio"] {
+    margin-right: 5px;
+    accent-color: #4F091D;
 }
 
-button[type="submit"] {
-    background-color: #75af4c;
-    color: white;
-    padding: 12px 20px;
+.pagination-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pagination-container button {
+    margin: 0 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #283149;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-container button:hover {
+    background-color: #0056b3;
+}
+
+.nav-button, .submit-button, .play-again-button {
+    margin: 10px;
+    padding: 12px 24px;
     font-size: 16px;
+    background-color: #131842;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
 }
 
-button[type="submit"]:hover {
-    background-color: #45a049;
+.nav-button:hover, .submit-button:hover, .play-again-button:hover {
+    background-color: #5A72A0;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
+.score-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
 
-    input[type="text"],
-    input[type="email"] {
-        margin-bottom: 10px;
-    }
+.timer {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
-    button[type="submit"] {
+.timer-display {
+    font-weight: bold;
+    color: #dc3545;
+}
+
+@media (max-width: 768px) {
+    .quiz-container {
+        padding: 15px;
+    }
+    .nav-button, .submit-button, .play-again-button {
+        padding: 10px 20px;
         font-size: 14px;
-        padding: 10px 15px;
     }
 }
